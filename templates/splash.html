@@ -5,5 +5,16 @@
 
 <body>
 <h1>Welcome to my Django site, {{ name }}!</h1>
+    <ul>
+        {% for subject in subject_list %}
+            <li>{{ subject }}</li>
+        {% endfor %}
+    </ul>
+<h2>People:</h2>
+    <ul>
+        {% for person in people %}
+            <li>{{ person.first_name }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
