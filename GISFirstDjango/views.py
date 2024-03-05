@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Person
 
 def splash(request):
-    name = 'Billy'
+    name = request.user
     subject_list = ['Chemistry', 'Mathematics', 'Economics']
     people = Person.objects.all()
     debug_people = list(people)
